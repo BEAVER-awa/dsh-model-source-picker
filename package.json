@@ -1,0 +1,46 @@
+{
+  "name": "dsh-model-source-picker",
+  "version": "0.1.0",
+  "description": "Provider-first model picker for DeepSeek Harness: the model source is the enlarged top level, models live one level below.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/client.js",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "deepseek",
+    "model-picker",
+    "model-selection",
+    "provider",
+    "ui"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true
+    }
+  },
+  "license": "MIT",
+  "repository": "github:BEAVER-awa/dsh-model-source-picker",
+  "homepage": "https://github.com/BEAVER-awa/dsh-model-source-picker#readme",
+  "bugs": "https://github.com/BEAVER-awa/dsh-model-source-picker/issues",
+  "author": "BEAVER"
+}

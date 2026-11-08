@@ -1,0 +1,12 @@
+# The model-source-picker bundle patch.
+#
+# A patch file is a top-level YAML array of loader patch entries. This one only
+# inserts a new row for the plugin itself: the host half is trivial, while the
+# client half (dsh.client.immediately) claims `conversation.input.model` in the
+# composer and rebuilds the picker as source-first.
+#
+# Drop this row (or disable the plugin) to fall back to the shipped picker.
+
+- insert:
+    - id: model-source-picker
+      name: 'dsh-model-source-picker'
